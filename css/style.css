@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-color: #ddd;
+  color: #fff;
+  min-height: 600px;
+  position: relative;
+}
+.container .overlay {
+  position: fixed;
+  background-color: #333333a1;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  /* display: none; */
+}
+
+.container .overlay .calc {
+  min-width: 350px;
+  min-height: 400px;
+  background-color: #bdbbbb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+
+  /* خلص هناااااا */
+}
+
+.container .overlay .calc .close {
+  position: fixed;
+  left: calc(100% - 15px);
+  top: -7px;
+  font-size: 30px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  display: block;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  line-height: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .overlay .calc .close:hover {
+  transform: scale(1.1);
+  /* transform: translateY(-3px); */
+  outline: 2px solid #fff;
+}
+.calc .result {
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 25px;
+  line-height: 60px;
+  padding-left: 10px;
+  transition: 0.3s;
+}
+
+.container .overlay .calc .allbutton {
+  position: relative;
+}
+.container .overlay .calc .allbutton .number {
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-gap: 20px;
+}
+.calc .allbutton .number button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+/* .calc .allbutton .number .zero {
+  grid-column: span 3;
+  justify-self: center;
+} */
+.calc .allbutton .number button,
+.calc .allbutton .Operators button,
+.calc .allbutton .ecul {
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #898989;
+  color: #fff;
+  transition: 0.1s;
+}
+.calc .allbutton .number .delete {
+  background-color: red;
+  transition: o.1s;
+  font-size: 30px;
+  position: relative;
+}
+/* .calc .allbutton .number .delete::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #fff;
+  height: 30px;
+  width: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  top: 14px;
+} */
+.calc .allbutton .number .delete:hover {
+  outline: none;
+}
+.calc .number button:hover,
+.calc .allbutton .Operators button:hover {
+  transform: scale(1.1);
+  outline: 3px solid #2196f3;
+}
+.calc .allbutton .Operators {
+  position: absolute;
+  left: 73%;
+  top: 10px;
+}
+.calc .allbutton .Operators button {
+  background-color: #2f519acc !important;
+  margin-bottom: 20px;
+  height: 40px;
+}
+.calc .allbutton .Operators button,
+.calc .allbutton .ecul {
+  display: flex;
+  width: 90px;
+  border-radius: 8px;
+  line-height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.calc .allbutton .ecul {
+  /* position: relative;
+  left: 20px; */
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: #2196f3;
+  transition: 0.3s all;
+}
+.calc .allbutton .ecul:hover {
+  width: 91%;
+  transform: scale(1.1);
+  margin-left: 18px;
+}
+.container .info-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  height: 300px;
+  width: 500px;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+}
+.container .info-box h4 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.container .info-box p {
+  color: #2196f3;
+  font-size: 18px;
+}
+.container .info-box span {
+  background-color: #2196f3;
+  color: #fff;
+  height: 25px;
+  width: 70px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .info-box span:hover {
+  transform: translateY(-3px);
+  outline: 4px solid rgb(246, 223, 180);
+}

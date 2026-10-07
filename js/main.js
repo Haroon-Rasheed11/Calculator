@@ -80,11 +80,18 @@ ecul.onclick = function () {
 let delet = document.querySelector(".delete");
 
 delet.onclick = function () {
-  result.textContent = result.textContent.slice(0, -1);
+  if (result.textContent === "NaN") {
+    result.textContent = "";
+    afterecul = false;
+  } else {
+    result.textContent = result.textContent.slice(0, -1);
+    afterecul = false;
+  }
 };
 
 // select delete all
 let deletAll = document.querySelector(".delete-all");
 deletAll.onclick = function () {
   result.textContent = "";
+  afterecul = false;
 };
